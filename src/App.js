@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom'
 import TodoList from './components/TodoList';
 import { useState } from 'react';
 import Modal from './components/Modal/Modal';
+import { useReducer } from 'react';
 
 function App() {
   const [todoName, setTodoName] = useState('');
@@ -41,6 +42,8 @@ function App() {
       ]
     }
   ]);
+
+  const [state, dispatch] = useReducer()
 
   /* TODO functions*/
   const onSubmitTodo = (e) => {
